@@ -1,2 +1,2 @@
-# Decentralized_Voting_System
+# Decentralized Voting System
  
