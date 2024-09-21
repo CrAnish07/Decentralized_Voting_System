@@ -45,7 +45,7 @@ contract Voting {
         require(_candidateIndex < candidates.length, "Invalid candidate index");
 
         candidates[_candidateIndex].voteCount++;
-        voters[msg.sender] == true;
+        voters[msg.sender] = true;
     }
 
     function getAllVotesOfCandidates() public view returns (Candidate[] memory) {

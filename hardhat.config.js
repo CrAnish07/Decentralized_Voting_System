@@ -1,6 +1,24 @@
 require("@nomicfoundation/hardhat-toolbox");
 
-/** @type import('hardhat/config').HardhatUserConfig */
+/**
+* @type import('hardhat/config').HardhatUserConfig
+*/
+
+require('dotenv').config();
+require("@nomiclabs/hardhat-ethers");
+
+const { API_URL, PRIVATE_KEY } = process.env;
+
 module.exports = {
-  solidity: "0.8.0",
-};
+   solidity: "0.8.11",
+   defaultNetwork: "volta",
+   networks: {
+      hardhat: {},
+      volta: {
+         url: API_URL,
+         accounts: [`0x894319cdbad9457ce0609c191850e8254c3261700a77c862e78c924e58980868`],
+         gas: 210000000,
+         gasPrice: 800000000000,
+      }
+   },
+}
