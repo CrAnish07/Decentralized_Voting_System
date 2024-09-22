@@ -16,7 +16,7 @@ module.exports = {
       hardhat: {},
       volta: {
          url: API_URL,
-         accounts: [`0x894319cdbad9457ce0609c191850e8254c3261700a77c862e78c924e58980868`],
+         accounts: [`0x${<PRIVATE_KEY>}`],
          gas: 210000000,
          gasPrice: 800000000000,
       }
