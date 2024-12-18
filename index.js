@@ -34,7 +34,7 @@ app.get("/index.html", (req, res) => {
 })
 
 
-app.post("/addCandidate", async(req, res) => {
+app.post("/vote", async(req, res) => {
     var vote = req.body.vote;
     console.log(vote);
     async function storeDataInBlockchain(vote) {
